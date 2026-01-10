@@ -138,10 +138,19 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            /* Updated to accommodate image */
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Added style for nav logo image */
+        .logo img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
         }
 
         .nav-links {
@@ -385,14 +394,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            font-weight: 800;
-            color: white;
+            /* Modified to support image */
+            overflow: hidden; 
             position: relative;
             z-index: 1;
             margin-top: 30px;
             border: 5px solid var(--bg-card);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* New style for the profile image inside avatar */
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-name {
@@ -1187,7 +1202,6 @@
             .profile-avatar {
                 width: 120px;
                 height: 120px;
-                font-size: 3rem;
             }
 
             .section-title {
@@ -1229,17 +1243,17 @@
     </style>
 </head>
 <body>
-    <!-- Background Animation -->
     <div class="bg-animation">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         <div class="floating-shape shape-3"></div>
     </div>
 
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">AS</a>
+            <a href="#" class="logo">
+                <img src="IMG_20250806_184104_622.jpg" alt="Amrit Seth">
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1257,7 +1271,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-menu-close" onclick="toggleMobileMenu()">
             <i class="fas fa-times"></i>
@@ -1271,7 +1284,6 @@
         <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
@@ -1314,11 +1326,13 @@
             </div>
             <div class="hero-visual">
                 <div class="profile-card">
-                    <div class="profile-avatar">AS</div>
+                    <div class="profile-avatar">
+                        <img src="IMG_20250806_184104_622.jpg" alt="Amrit Seth">
+                    </div>
                     <h3 class="profile-name">Amrit Seth</h3>
                     <p class="profile-title">Cloud & DevOps Engineer</p>
                     <div class="profile-social">
-                        <a href="https://linkedin.com/in/amrit-seth" target="_blank">
+                        <a href="https://linkedin.com/in/amrit-seth-702520315" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://github.com/amritseth" target="_blank">
@@ -1350,7 +1364,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1423,7 +1436,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1503,7 +1515,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1599,7 +1610,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1630,7 +1640,6 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1665,7 +1674,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="section-container">
             <div class="section-header fade-in">
@@ -1697,7 +1705,7 @@
                                 <span>+91-6393470955</span>
                             </div>
                         </a>
-                        <a href="https://linkedin.com/in/amrit-seth" target="_blank" class="contact-method">
+                        <a href="https://linkedin.com/in/amrit-seth-702520315" target="_blank" class="contact-method">
                             <i class="fab fa-linkedin"></i>
                             <div>
                                 <strong>LinkedIn</strong>
@@ -1737,13 +1745,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Amrit Seth</div>
             <p class="footer-text">© 2024 Amrit Seth. Built with ❤️ for the cloud.</p>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/amrit-seth" target="_blank">
+                <a href="https://linkedin.com/in/amrit-seth-702520315/" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://github.com/amritseth" target="_blank">
